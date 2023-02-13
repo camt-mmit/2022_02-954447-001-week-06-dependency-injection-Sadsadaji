@@ -1,0 +1,9 @@
+<div>
+  <label for="input-id {{ id }}">Input {{no}} </label>
+  <input
+  #input
+  type="number"
+  [value]="data.value"
+  (change)="onChange(input.valueAsNumber)" />
+  <button type="button" (click)="onRemove()" [disabled]="!removeable">Delete</button>
+</div>
